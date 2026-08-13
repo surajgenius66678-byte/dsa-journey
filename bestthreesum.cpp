@@ -27,7 +27,7 @@ return ans;
 }
 
 int main(){
-    vector<int>vec={-1,0,1,2,-1,-4};
+    vector<int>vec={-2,0,1,1,2};
     sort(vec.begin(),vec.end());
     vector<vector<int>>as=sum0(vec);
     for(int i=0;i<as.size();i++){
