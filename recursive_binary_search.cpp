@@ -1,0 +1,24 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int binary_search(vector<int>arr,int target,int st,int end){
+    if(st<=end){
+        return -1;
+    int mid=st+(end-st)/2;
+    if(arr[mid]==target){
+        return mid;
+    }else if(arr[mid]>target){
+        return binary_search(arr,target,st,mid-1);
+    }else{
+        return binary_search(arr,target,mid+1,end);
+
+    }
+    }
+return -1;
+}
+int main(){
+    vector<int>arr={1,2,3,4,5,6,7,8};
+    int target=5;
+    cout << binary_search(arr,target,0,arr.size()-1);
+    return 0;
+}
